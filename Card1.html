@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUSSA TAROT</title>
+
+     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cambyeo.github.io/Butssa/Card1.html">
+    <meta property="og:title" content="BUSSA님의 타로가 전달되었습니다">
+    <meta property="og:description" content="링크를 눌러 당신의 운세를 확인해보세요">
+    <meta property="og:image" content="https://본인계정.github.io/레포지토리명/card-image.jpg">
+
+
+
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+            --q1-color: #0984e3;
+            --q2-color: #00b894;
+            --q3-color: #d63031;
+            --q4-color: #fdcb6e;
+            --bg-color: #f0f2f5;
+            --card-bg: #ffffff;
+            --text-main: #2d3436;
+            --text-sub: #636e72;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, system-ui, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* 헤더 디자인 */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: var(--primary-gradient);
+            color: white;
+            border-radius: 24px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(108, 92, 231, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            letter-spacing: -1px;
+            font-weight: 800;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        /* 그리드 레이아웃 */
+        .quarter-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        /* 카드 디자인 */
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            border: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        /* 분기별 배지 */
+        .q-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            width: fit-content;
+        }
+
+        .card.q1 .q-badge { background: #e1f5fe; color: var(--q1-color); }
+        .card.q2 .q-badge { background: #e8f5e9; color: var(--q2-color); }
+        .card.q3 .q-badge { background: #ffebee; color: var(--q3-color); }
+        .card.q4 .q-badge { background: #fffde7; color: var(--q4-color); }
+
+        h2 {
+            font-size: 1.5rem;
+            margin: 0 0 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tagline {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-sub);
+            margin-bottom: 20px;
+            display: block;
+            border-left: 3px solid #ddd;
+            padding-left: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .card.q1 li::before { color: var(--q1-color); }
+        .card.q2 li::before { color: var(--q2-color); }
+        .card.q3 li::before { color: var(--q3-color); }
+        .card.q4 li::before { color: var(--q4-color); }
+
+        .highlight {
+            background: linear-gradient(to top, #fff3cd 40%, transparent 40%);
+            font-weight: 700;
+            padding: 0 2px;
+        }
+
+        /* 하단 이미지 영역 */
+        .visual-element {
+            margin-top: auto;
+            padding-top: 20px;
+            text-align: right;
+            font-size: 2rem;
+            opacity: 0.2;
+        }
+
+        @media (max-width: 768px) {
+            .quarter-grid {
+                grid-template-columns: 1fr;
+            }
+            header h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>2026 YEARLY ROADMAP</h1>
+        <p>분석하고, 확립하며, 매료시키고, 베푸는 도약의 한 해</p>
+    </header>
+
+    <div class="quarter-grid">
+        <div class="card q1">
+            <div class="q-badge">1st Quarter</div>
+            <h2>🔍 인고와 분석</h2>
+            <span class="tagline">"내실을 다지며 도약을 준비하는 시기"</span>
+            <ul>
+                <li><strong>방송 한 단계 퀀텀 점프:</strong> 버티다 보면 반드시 상승 기류가 찾아옵니다.</li>
+                <li><strong>내부 결속 강화:</strong> 신규 유입보다 <span class="highlight">기존 시청자</span> 케어에 집중하세요.</li>
+                <li><strong>데이터 모니터링:</strong> 시청자 피드백 반영 및 콘텐츠 분석이 필수입니다.</li>
+                <li><strong>마인드셋:</strong> 결과에 일희일비하지 않는 꾸준함이 답입니다.</li>
+            </ul>
+            <div class="visual-element">📈</div>
+        </div>
+
+        <div class="card q2">
+            <div class="q-badge">2nd Quarter</div>
+            <h2>🎨 정체성 확립</h2>
+            <span class="tagline">"나만의 색깔을 선명하게 실천하는 시기"</span>
+            <ul>
+                <li><strong>장인 정신:</strong> 분산되지 않는 한 우물 파기의 집중력이 필요합니다.</li>
+                <li><strong>적극적 외부 교류:</strong> 합방, 크루 활동 등 외부 접점을 과감히 확대하세요.</li>
+                <li><strong>기회의 수용:</strong> 기업 협업이나 신규 프로젝트 제안을 긍정적으로 검토하세요.</li>
+                <li><strong>강점 극대화:</strong> 단점 보완보다는 <span class="highlight">내가 제일 잘하는 것</span>에 올인!</li>
+            </ul>
+            <div class="visual-element">💎</div>
+        </div>
+
+        <div class="card q3">
+            <div class="q-badge">3rd Quarter</div>
+            <h2>⚡ 브랜드 강화</h2>
+            <span class="tagline">"세네풀이라는 캐릭터에 깊이 빠져들게 하는 시기"</span>
+            <ul>
+                <li><strong>캐릭터 브랜딩:</strong> 단순 콘텐츠를 넘어 <span class="highlight">본인만의 매력</span>을 각인시키세요.</li>
+                <li><strong>수익 모델 다각화:</strong> 유튜브, 굿즈, 외주 등 비즈니스 영역을 확장하세요.</li>
+                <li><strong>성장의 가속화:</strong> 방송의 퀄리티와 규모에 대해 더 큰 욕심을 부려도 좋습니다.</li>
+                <li><strong>깊은 관계 유지:</strong> 확장을 지속하되, 곁에 있는 소중한 사람들을 챙기세요.</li>
+            </ul>
+            <div class="visual-element">🔥</div>
+        </div>
+
+        <div class="card q4">
+            <div class="q-badge">4th Quarter</div>
+            <h2>🌿 안정과 배려</h2>
+            <span class="tagline">"이미지를 완성하고 선한 영향력을 나누는 시기"</span>
+            <ul>
+                <li><strong>이미지 스펙트럼 확장:</strong> '누나/언니' 같은 포용력 있는 이미지 시도.</li>
+                <li><strong>낙수 효과와 상생:</strong> 새싹 스트리머들과 협업하며 <span class="highlight">선한 영향력</span> 행사.</li>
+                <li><strong>인정과 감사:</strong> 타인의 도움을 기쁘게 수용하며 긍정적 인정 욕구를 실현하세요.</li>
+                <li><strong>My Way:</strong> 결국 본인이 즐거운 방향으로 꾸준히 나아가는 것이 정답입니다.</li>
+            </ul>
+            <div class="visual-element">👑</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
